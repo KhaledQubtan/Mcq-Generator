@@ -1,0 +1,7 @@
+# Style profile — أسئلة كمية الحركة
+
+- Forms: (1) complete-the-statement with "= ......" and a unit at the end (most common); (2) direct calculation (mass, momentum, change in momentum, rebound speed, height); (3) conceptual "إذا تحرك جسم بحيث ... فإن" with four statements; (4) "أي الحالات الآتية" with numbered statements (1),(2),(3) and choices "(1) فقط"، "(1)، (2) فقط"...; (5) ratio questions (نسبة السرعتين، ف1/ف2); (6) real-life cause/effect (الرصاصة تقذف الشخص، حبة الرمل).
+- Stems: 1–3 lines, numeric data with mixed units (طن، كجم، جم، ملليجرام؛ كم/س، م/ث، سم/ث) requiring conversion; answer units stated in the stem.
+- Distractors: wrong unit conversion (factor 1000, 100, 3.6, 10^{5}), forgetting to convert km/h, adding instead of subtracting speeds on rebound (and vice versa), sign of direction, forgetting g, differentiate vs integrate confusion, using position instead of velocity, numbers differing by powers of ten (60 / 60000 / 216 / 216000).
+- Topics: variable mass (صاروخ، قطرة مطر)، definition and units of momentum, momentum from position/velocity vectors (differentiation), change in momentum with constant/variable mass, integration of acceleration, free fall/vertical projection then rebound (ground/ceiling), sinking in water, conservation when projectile embeds in target, relative velocity (target moving toward/away).
+- Difficulty mix: ~30% recall/understanding, ~50% application, ~20% higher-order (ratios, minimum momentum, which interval).

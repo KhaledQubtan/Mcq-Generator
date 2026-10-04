@@ -1,0 +1,6 @@
+# Style profile (from Google OCR of the questions PDF; used for form only)
+- Forms: "اختر الإجابة الصحيحة" completion stems ending in "...." (very common); direct definition recall (تعريف الداين/النيوتن/ثقل كجم); unit conversion (147 نيوتن = .... ث.كجم); short calculations with ق = كح (find force/mass/acceleration); ratio questions (masses vs accelerations 3:4 -> 4:3; three bodies); conceptual "what happens" (train detaches last car -> moves with uniform acceleration); comparisons (two masses same speed same resistance -> distances); vector form (|ح| from ق1+ق2); variable mass/momentum function (ق = dم/dن at instant); force as function of displacement / velocity (integration).
+- Long problems: horizontal motion with resistance per ton, brakes, bullets in wooden barriers, train with detached car, inclined pulling force with normal reaction, vertical motion (sand, balloons, helicopters, parachutes, lifting with rope).
+- Stems short-to-medium (1-3 lines); numeric choices with units.
+- Distractors: wrong unit system (نيوتن vs ث.كجم, factor 9.8), cm vs m, km/h not converted, inverted ratio, sum instead of difference, sign/direction errors (forgetting resistance or weight), forgetting the 1/2 in ف = ع0 ن + ½ ح ن².
+- Difficulty mix: ~30% recall/conceptual, ~50% one-two-step calculation, ~20% multi-step.
