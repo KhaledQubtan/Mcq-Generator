@@ -16,24 +16,28 @@ def fmt(x):
 
 def num(q, correct, pool):
     """numeric MCQ; correct/pool items are numbers or (value, latex) tuples.
-    choose 3 distractors so the correct answer has the next target rank; choices sorted ascending."""
+    choose 3 distractors among the first 5 plausible ones so ranks stay balanced; choices sorted ascending."""
     def val(c): return c[0] if isinstance(c, tuple) else c
     def lab(c): return ('$' + c[1] + '$') if isinstance(c, tuple) else fmt(c)
     cv = val(correct)
     seen, uniq = {round(cv, 6)}, []
-    if not isinstance(correct, tuple) and cv != 0:
-        pool = list(pool) + [cv/2, cv*2, cv/10, cv*10, cv/4, cv*4]
     for p in pool:
         if round(val(p), 6) not in seen:
             seen.add(round(val(p), 6)); uniq.append(p)
-    below = [p for p in uniq if val(p) < cv]
-    above = [p for p in uniq if val(p) > cv]
-    feas = [tt for tt in range(4) if len(below) >= tt and len(above) >= 3 - tt]
-    if not feas:
-        raise SystemExit('pool too small: ' + q)
-    t = min(feas, key=lambda k: (RC[k], k))
-    RC[t] += 1
-    chosen = below[:t] + above[:3 - t] + [correct]
+    if len(uniq) < 4 and not isinstance(correct, tuple) and cv != 0:
+        for p in [cv*2, cv/2, cv*10, cv/10]:
+            if round(p, 6) not in seen and len(uniq) < 4:
+                seen.add(round(p, 6)); uniq.append(p)
+    cand = uniq[:5]
+    best = None
+    for combo in itertools.combinations(range(len(cand)), 3):
+        r = sum(1 for i in combo if val(cand[i]) < cv)
+        key = (RC[r], sum(combo))
+        if best is None or key < best[0]:
+            best = (key, combo, r)
+    _, combo, r = best
+    RC[r] += 1
+    chosen = [cand[i] for i in combo] + [correct]
     chosen.sort(key=val)
     labels = [lab(c) for c in chosen]
     assert len(set(labels)) == 4, (q, labels)
