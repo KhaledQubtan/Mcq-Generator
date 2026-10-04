@@ -1,0 +1,4 @@
+work/downloads/
+work/source/
+work/lessons/*/*.png
+decode_dl.py
