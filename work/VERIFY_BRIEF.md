@@ -12,6 +12,6 @@ Fix every wrong question directly in work/output/<TOPIC_ID>.json with a Python s
 - prefer fixing the stem numbers or the marked index / swapping the right value into the correct slot so correct_answer index stays the same (keeps the 0–3 balance). Keep ids, key order, topic_id string unchanged, LaTeX with $…$, no Unicode math symbols, English digits.
 - If unsalvageable, rewrite that question entirely (same id) on the same concept.
 Then run: cd /home/user/Mcq-Generator && python3 validate_mcq.py work/output/<TOPIC_ID>.json --topic-id <TOPIC_ID>   → must be 0 errors (review WARNs).
-Do not touch any other file. No git.
+Do not touch any other file. No git. Put any scratch scripts in /home/user/Mcq-Generator/work/lessons/<TOPIC_ID>/verify_*.py (NOT the shared scratchpad).
 
 Final reply (short): number of questions checked, list of ids changed with one-line reason each, final validator line.
